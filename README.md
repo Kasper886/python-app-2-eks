@@ -1,5 +1,6 @@
-# AWS EKS cluster creation by Terraform
-Thie repo demonstrates how to create AWS EKS cluster by means of IaaC Terraform and assign network resources to it. Below you can find the diagram that illustrates created cluster.
+# AWS EKS cluster creation by Terraform and deploying python application
+Thie repo demonstrates how to create AWS EKS cluster by means of IaaC Terraform and deploy python web application to it. 
+Below you can find the diagram that illustrates created cluster.
 
 ![Image alt](https://github.com/Kasper886/WaveProject/blob/master/EKS-Cluster/files/diagram3.png)
 
@@ -17,6 +18,14 @@ Thie repo demonstrates how to create AWS EKS cluster by means of IaaC Terraform 
 1. Worker nodes in private subnets
 2. Scaling configuration - desired size = 2, max size = 10, min_size = 1
 3. Instances type - spot instances t3.small
+
+### IAM Role & Policies
+1. Cluster Role - Let EKS permission to create/use aws resources by cluster.
+2. Policy - [Cluster_Policy](https://github.com/SummitRoute/aws_managed_policies/blob/master/policies/AmazonEKSClusterPolicy)
+3. Node Group Role - Let EC2 permission to create/use aws resources by instances.
+4. Policy - [Worker_Node](https://github.com/SummitRoute/aws_managed_policies/blob/master/policies/AmazonEKSWorkerNodePolicy)
+5. Policy - [EKS_CNI](https://github.com/SummitRoute/aws_managed_policies/blob/master/policies/AmazonEKS_CNI_Policy)
+6. Policy - [Registry_Read](https://github.com/SummitRoute/aws_managed_policies/blob/master/policies/AmazonEC2ContainerRegistryReadOnly)
 
 ## How to do
 You should have terraform on board and AWS credentials to get access to your AWS account.
