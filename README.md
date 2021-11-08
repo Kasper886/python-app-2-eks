@@ -1,4 +1,4 @@
-# AWS EKS cluster creation by Terraform and deploying python application
+# AWS EKS cluster creation by Terraform and python application deploying
 Thie repo demonstrates how to create AWS EKS cluster by means of IaaC Terraform and deploy python web application to it. 
 Below you can find the diagram that illustrates created cluster.
 
