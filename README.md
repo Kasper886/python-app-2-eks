@@ -59,6 +59,7 @@ b) Then run these files
 ./PythonFlaskSetup.sh
 ```
 c) Build the Docker image and push to Dockerhub
+If you have an error Permision dinied, use sudo with the docker commands.
 ```
 docker build --tag <YourDockerHub>/python-docker .
 ```
