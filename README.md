@@ -106,7 +106,7 @@ If you want to scale your node group, you need (the command to install these too
 
 Also, you need it to deploy the application to EKS cluster. To install these tools run the following command
 ```
-chamod 744 ../aws.sh
+chmod 744 ../aws.sh
 ../aws.sh
 ```
 
