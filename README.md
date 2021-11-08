@@ -29,6 +29,7 @@ Below you can find the diagram that illustrates created cluster.
 
 ## How to do
 You should have terraform on board and AWS credentials to get access to your AWS account.
+
 ### 1. Export AWS credentials and your default region (I worked in us-east-1 region)
 ```
 export AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxx
@@ -37,11 +38,46 @@ export AWS_DEFAULT_REGION=us-east-1
 ```
 ### 2. Clone repository and start the Terraform script
 ```
-git clone https://github.com/Kasper886/WaveProject.git
+git clone https://github.com/Kasper886/python-app-2-eks.git
 ```
 ```
-cd WaveProject/EKS-cluster/
+cd python-app-2-eks/
 ```
+### 3. Install Docker, Python, Flask
+If you want to build the Docker image or run the application on your own server, you should install Docker, Python and Flask.
+Otherwise you can skip this step and move to step 4. Then use ready Docker image from Dockerhub.
+a) change access to bash files
+```
+chmod 744 DockerSetup.sh
+chmod 744 PythonFlaskSetup.sh
+```
+b) Then run these files
+```
+./DockerSetup.sh
+```
+```
+./PythonFlaskSetup.sh
+```
+c) Build the Docker image and push to Dockerhub
+```
+docker build --tag <YourDockerHub>/python-docker .
+```
+Where YourDockerHub - your Docker Hub account name you created before. If not, you can do it [here](https://hub.docker.com/)
+```
+docker login
+```
+The system will ask your user name and password from your Dockerhub account
+```
+docker images
+```
+Check which image you created.
+```
+docker push <<YourDockerHub>/python-docker:latest
+```
+If you didn't indicate version of your image, it will be latest. 
+When ready, go to EKS cluster creation.
+
+### 4. Run EKS cluster
 ```
 terraform init
 ```
