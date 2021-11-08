@@ -92,10 +92,15 @@ terraform apply -auto-approve
 ```
 If you want to scale your node group, you need:
 1. [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
-2. [EKSCTL](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html)
-3. [KubeCTL](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
+2. [EKS CTL](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html)
+3. [Kube CTL](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
 
-Also, you need it to deploy the application to EKS cluster.
+Also, you need it to deploy the application to EKS cluster. To install these tools run the following command
+```
+chamod 744 ../aws.sh
+../aws.sh
+```
+
 Then run the following command to "login" to your EKS cluster:
 
 aws eks update-kubeconfig --name clusterName --region AWS region
