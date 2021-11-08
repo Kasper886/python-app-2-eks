@@ -46,6 +46,7 @@ cd python-app-2-eks/
 ### 3. Install Docker, Python, Flask
 If you want to build the Docker image or run the application on your own server, you should install Docker, Python and Flask.
 Otherwise you can skip this step and move to step 4. Then use ready Docker image from Dockerhub.
+
 a) change access to bash files
 ```
 chmod 744 DockerSetup.sh
@@ -58,7 +59,7 @@ b) Then run these files
 ```
 ./PythonFlaskSetup.sh
 ```
-c) Build the Docker image and push to Dockerhub
+c) Build the Docker image and push to Dockerhub<br/>
 If you have an error Permision dinied, use sudo with the docker commands.
 ```
 docker build --tag <YourDockerHub>/python-docker .
