@@ -97,7 +97,9 @@ terraform plan
 ```
 terraform apply -auto-approve
 ```
-If you want to scale your node group, you need:
+This can take up to 20 minutes.
+
+If you want to scale your node group, you need (the command to install these tools is bellow):
 1. [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 2. [EKS CTL](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html)
 3. [Kube CTL](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
