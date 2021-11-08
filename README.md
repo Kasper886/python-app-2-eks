@@ -95,6 +95,7 @@ If you want to scale your node group, you need:
 2. [EKSCTL](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html)
 3. [KubeCTL](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
 
+Also, you need it to deploy the application to EKS cluster.
 Then run the following command to "login" to your EKS cluster:
 
 aws eks update-kubeconfig --name clusterName --region AWS region
