@@ -79,6 +79,9 @@ When ready, go to EKS cluster creation.
 
 ### 4. Run EKS cluster
 ```
+cd terraform
+```
+```
 terraform init
 ```
 ```
@@ -108,6 +111,39 @@ eksctl scale nodegroup --cluster=clusterName --nodes=4 --name=nodegroupName
   Where clusterName is name of your cluster (wave-eks), nodegroupName - name of your group name (nodes-01)
 ```
 eksctl scale nodegroup --cluster=wave-eks --nodes=4 --name=nodes-01
+```
+
+## Deployment
+I will use my Docker image kasper86/python-docker:latest
+Let's create the deployment
+```
+kubectl create deployment python-app --image kasper86/python-docker:latest
+```
+To get access to deployment we need external port and the LoadBalancer that provides dns name
+```
+kubectl expose deployment python-app --type=LoadBalancer --port 5000
+```
+To make sure it works, run the following commands
+```
+kubectl get pods
+```
+```
+kubectl get deploy
+```
+```
+kubectl get svc
+```
+These commands allow to check running pods, deployment and created service. When you finish checking, delete them
+```
+kubectl delete service python-app
+```
+```
+kubectl delete deploy python-app
+```
+
+## Finally delete EKS cluster
+```
+terraform destroy -auto-approve
 ```
 
 ## Demo
