@@ -106,8 +106,16 @@ If you want to scale your node group, you need (the command to install these too
 
 Also, you need it to deploy the application to EKS cluster. To install these tools run the following command
 ```
-chmod 744 ../aws.sh
+chmod 744 ../awscli.sh
+chmod 744 ../eksctl.sh
+chmod 744 ../kubectl.sh
 ../aws.sh
+```
+```
+../eks.sh
+```
+```
+../kubectl.sh
 ```
 
 Then run the following command to "login" to your EKS cluster:
