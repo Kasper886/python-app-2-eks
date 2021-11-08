@@ -72,7 +72,7 @@ docker images
 ```
 Check which image you created.
 ```
-docker push <<YourDockerHub>/python-docker:latest
+docker push <YourDockerHub>/python-docker:latest
 ```
 If you didn't indicate version of your image, it will be latest. 
 When ready, go to EKS cluster creation.
