@@ -80,6 +80,11 @@ If you didn't indicate version of your image, it will be latest.
 When ready, go to EKS cluster creation.
 
 ### 4. Run EKS cluster
+If you don't still have terraform, run this command
+```
+chmod 744 terraform.sh
+./terraform.sh
+```
 ```
 cd terraform
 ```
