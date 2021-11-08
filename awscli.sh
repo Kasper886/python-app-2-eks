@@ -1,9 +1,9 @@
-#------------------------------------#
-# Install AWS CLI, EKS CTL, Kube CTL #
-#                                    #
-# Created: 08.11.2021                # 
-# Owner: Alex Largman                # 
-#------------------------------------#
+#-----------------------#
+# Install AWS CLI       #
+#                       #
+# Created: 08.11.2021   # 
+# Owner: Alex Largman   # 
+#-----------------------#
 
 
 #!/bin/bash
